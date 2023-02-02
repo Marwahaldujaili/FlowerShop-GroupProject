@@ -6,52 +6,6 @@
   box-sizing: border-box;
   font-family: "Work Sans", sans-serif;
 }
-body {
-  width: 100%;
-  height: 100vh;
-}
-main {
-  margin: 20px 40px;
-}
-
-h1 {
-  text-align: center;
-}
-
-.fa-solid {
-  color: rgb(255, 101, 113);
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-p,
-h4 {
-  text-align: center;
-  margin: 5px 0;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.container > * {
-  padding: 20px;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-#email:hover {
-  color: rgb(255, 101, 113);
-}
-
-.logo-div {
-  margin: auto;
-}
 
 nav {
   width: 100%;
@@ -59,11 +13,12 @@ nav {
   background-color: rgb(255, 101, 113);
   padding: 1.5rem;
 }
+
 nav .logo {
   width: 80%;
   height: 80%;
   margin: auto;
-  background-image: url(./images/logo.png);
+  background-image: url(./images/carousel-images/logo.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -78,7 +33,115 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: white;
-  font-size: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 20px;
+}
+
+.card {
+  border: 1px solid silver;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 8px 0 #ff6571;
+}
+
+.description {
+  margin-left: 10px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.image1 {
+  background-image: url(./images/collection-images/everyday-bouquet.jpg);
+  background-size: cover;
+  height: 300px;
+  background-position: center;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.image2 {
+  background-image: url(./images/collection-images/for-her.jpg);
+  background-size: cover;
+  height: 300px;
+  background-position: center;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.image3 {
+  background-image: url(./images/collection-images/home-bouquet.jpg);
+  background-size: cover;
+  height: 300px;
+  background-position: center;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.image4 {
+  background-image: url(./images/collection-images/orange-bouquet.jpg);
+  background-size: cover;
+  height: 300px;
+  background-position: center;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.image5 {
+  background-image: url(./images/collection-images/pink-in-vase.jpg);
+  background-size: cover;
+  height: 300px;
+  background-position: center;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.image6 {
+  background-image: url(./images/collection-images/spring-vase.jpg);
+  background-size: cover;
+  height: 300px;
+  background-position: center;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.image7 {
+  background-image: url(./images/collection-images/thank-you-bouquet.jpg);
+  background-size: cover;
+  height: 300px;
+  background-position: center;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.image8 {
+  background-image: url(./images/collection-images/tuplips-vase.jpg);
+  background-size: cover;
+  height: 300px;
+  background-position: center;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.price {
+  margin-left: 10px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-style: italic;
   font-weight: bold;
 }
 
@@ -87,6 +150,12 @@ footer {
   background-color: rgb(255, 101, 113);
   margin-top: 10px;
   padding: 10px;
+}
+footer h2 {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-align: center;
 }
 
 footer ul {
@@ -102,33 +171,9 @@ footer ul li a {
   font-size: 1.5rem;
 }
 
-footer h2 {
-  color: white;
-  text-align: center;
-}
-
 @media screen and (min-width: 768px) {
   .container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .container > * {
-    width: 45%;
-  }
-  nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    align-items: center;
-  }
-  nav ul {
-    width: 70%;
-  }
-  nav .logo {
-    width: 50%;
-    height: 80%;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   nav ul li a {
     font-size: 1.3rem;
@@ -146,7 +191,7 @@ footer h2 {
 
 @media screen and (min-width: 1024px) {
   .container {
-    flex-wrap: nowrap;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   nav {
     display: flex;
@@ -160,17 +205,5 @@ footer h2 {
   nav .logo {
     width: 50%;
     height: 80%;
-  }
-  nav ul li a {
-    font-size: 1.3rem;
-  }
-  footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
-  }
-  footer ul {
-    width: 20%;
   }
 }
